@@ -1,0 +1,130 @@
+/* ==========================================================================
+   TGIT — UI Design System Tokens (CSS Custom Properties)
+   Source: UI Design System & AI Development Guidelines, v2.1
+   Owner: TGIT - UI/UX Team
+
+   RULES FOR DEVELOPERS & AI CODING ASSISTANTS
+   - Reference these variables directly. Never hardcode hex colors, pixel
+     spacing, font names, or shadow values in component code.
+   - Do not introduce new colors, tints, fonts, or spacing values outside
+     what is defined here — including values an AI assistant may suggest
+     by default (e.g. Bootstrap blue, Material purple, system fonts).
+   - All text/background color pairs must meet WCAG 2.1 AA contrast
+     (4.5:1 normal text, 3:1 large text 18pt+/bold 14pt+ and UI boundaries).
+   - See accessibility notes inline below before pairing colors.
+
+   v2.1 update: Grey 300, the 64px spacing step, and the 3 elevation/shadow
+   levels — previously placeholders in this file pending confirmation —
+   are now formally defined in the guidelines (Sections 2.2, 4, and 4.1
+   respectively) with the same values already used here.
+   ========================================================================== */
+
+:root {
+
+  /* ---- Color: Primary & Accent (Section 2.1) --------------------------- */
+  --color-primary-blue: #00B9FA;        /* Buttons, links, active states, key highlights. Pair with dark text (--color-grey-900), NOT white. */
+  --color-primary-blue-dark: #0077A3;   /* Use when white text is required on a blue background (hover/dark UI); link text on white. */
+  --color-accent-red: #DB2F20;          /* Destructive actions & critical alerts ONLY. Never a default button or large background. */
+
+  /* Tints of Primary Blue — backgrounds only. Always pair with --color-grey-900 text (never white or --color-primary-blue-dark). */
+  --color-tint-primary-blue-1: #DAF5FE; /* Differentiator background */
+  --color-tint-primary-blue-2: #A9E7FD; /* Second differentiator background, if required */
+
+  /* ---- Color: Muted Greys / Neutrals (Section 2.2) ---------------------- */
+  --color-grey-900: #202124; /* Primary body text, headings */
+  --color-grey-600: #5F6368; /* Secondary text, captions, muted labels */
+  --color-grey-400: #9AA0A6; /* Disabled text, placeholder text */
+  --color-grey-300: #BEC2C6; /* Disabled button background (Section 5.1), defined in Section 2.2 as of v2.1 */
+  --color-grey-200: #E1E3E6; /* Borders, dividers, table gridlines */
+  --color-grey-50:  #F8F9FA; /* Page/section backgrounds, alternating table rows */
+
+  /* ---- Color: Semantic (Section 2.3) ------------------------------------ */
+  --color-success: #1E8E3E; /* Confirmation messages, success states */
+  --color-warning: #F2A600; /* Warnings, caution states */
+  --color-error:   #DB2F20; /* Error states, validation failures (= Accent Red) */
+  --color-info:    #00B9FA; /* Informational banners/tooltips (= Primary Blue) */
+
+  /* ---- Color: Chart / Data-visualisation palette (Section 2.3, graphs) --
+     Five-step ramp (muted / shade / base / tint / tint 2) per hue family.
+     For charts, graphs, and data viz ONLY — not for UI chrome. */
+
+  /* Primary Blue family */
+  --color-chart-primary-blue-muted:  #BBD1D9;
+  --color-chart-primary-blue-shade:  #00365D;
+  --color-chart-primary-blue:        #00B9FA;
+  --color-chart-primary-blue-tint:   #A9E7FD;
+  --color-chart-primary-blue-tint-2: #DAF5FE;
+
+  /* Primary Blue — Dark family */
+  --color-chart-primary-blue-dark-muted:  #97A8AE;
+  --color-chart-primary-blue-dark-shade:  #284854;
+  --color-chart-primary-blue-dark:        #0077A3;
+  --color-chart-primary-blue-dark-tint:   #0CA5DC;
+  --color-chart-primary-blue-dark-tint-2: #60D3FC;
+
+  /* Dark Blue family */
+  --color-chart-dark-blue-muted:  #4F5960;
+  --color-chart-dark-blue-shade:  #011626;
+  --color-chart-dark-blue:        #00365D;
+  --color-chart-dark-blue-tint:   #0164AB;
+  --color-chart-dark-blue-tint-2: #0186E6;
+
+  /* Aqua Blue family */
+  --color-chart-aqua-blue-muted:  #88B1B5;
+  --color-chart-aqua-blue-shade:  #2E7379;
+  --color-chart-aqua-blue:        #10B9C8;
+  --color-chart-aqua-blue-tint:   #00E1F5;
+  --color-chart-aqua-blue-tint-2: #97F3FB;
+
+  /* Lime Green family (row was relabeled "Muted Lime Green" in v2.1 — see
+     Section 2.3; previously mislabeled "Muted Dark Blue" in v2.0) */
+  --color-chart-lime-green-muted:  #989E87;
+  --color-chart-lime-green-shade:  #536719;
+  --color-chart-lime-green:        #A0BF47;
+  --color-chart-lime-green-tint:   #C1E297;
+  --color-chart-lime-green-tint-2: #E8FBD0;
+
+  /* Violet family */
+  --color-chart-violet-muted:  #836E97;
+  --color-chart-violet-shade:  #311849;
+  --color-chart-violet:        #633291;
+  --color-chart-violet-tint:   #822DD3;
+  --color-chart-violet-tint-2: #D3A8FC;
+
+  /* ---- Typography (Section 3) -------------------------------------------- */
+  --font-family-base: 'Open Sans', 'Segoe UI', Arial, sans-serif; /* Do not substitute system default fonts */
+
+  --font-size-h1: 32px;         --line-height-h1: 40px;         --font-weight-h1: 700; /* Page titles */
+  --font-size-h2: 26px;         --line-height-h2: 34px;         --font-weight-h2: 700; /* Section headers */
+  --font-size-h3: 22px;         --line-height-h3: 30px;         --font-weight-h3: 600; /* Sub-section headers */
+  --font-size-h4: 18px;         --line-height-h4: 26px;         --font-weight-h4: 600; /* Card / panel titles */
+  --font-size-body: 15px;       --line-height-body: 24px;       --font-weight-body: 400; /* Default body text */
+  --font-size-body-small: 13px; --line-height-body-small: 20px; --font-weight-body-small: 400; /* Secondary/help text */
+  --font-size-caption: 12px;    --line-height-caption: 16px;    --font-weight-caption: 400; /* Labels, metadata, timestamps */
+  --font-size-button: 15px;     --line-height-button: 20px;     --font-weight-button: 600; /* Button labels */
+
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* ---- Spacing (Section 4) — all values are multiples of the 8px base --- */
+  --space-xs:  4px;  /* Icon-to-label gaps, tight inline spacing */
+  --space-sm:  8px;  /* Base spacing unit; form field internal padding */
+  --space-md:  16px; /* Default spacing between elements */
+  --space-lg:  24px; /* Spacing between sections within a card */
+  --space-xl:  32px; /* Spacing between major page sections */
+  --space-xxl: 48px; /* Large section breaks */
+  --space-xxxl: 64px; /* Extra-large spacing / hero sections, added to the Section 4 table as of v2.1 */
+
+  /* ---- Corner radius (Section 4.1) --------------------------------------- */
+  --radius-sm: 4px;  /* Small elements: inputs, tags, chips */
+  --radius-md: 8px;  /* Buttons, cards, panels */
+  --radius-lg: 12px; /* Modals, large containers */
+
+  /* ---- Elevation / shadow (Section 4.1) ---------------------------------
+     As of v2.1 these three levels are spelled out explicitly in the
+     guidelines (Section 4.1), matching the values below. */
+  --shadow-level-1: 0 1px 2px rgba(32, 33, 36, 0.08), 0 1px 3px rgba(32, 33, 36, 0.10); /* Cards, resting panels */
+  --shadow-level-2: 0 2px 6px rgba(32, 33, 36, 0.12), 0 4px 8px rgba(32, 33, 36, 0.10); /* Dropdowns, popovers, raised nav */
+  --shadow-level-3: 0 8px 16px rgba(32, 33, 36, 0.16), 0 12px 24px rgba(32, 33, 36, 0.12); /* Modals, large containers */
+}

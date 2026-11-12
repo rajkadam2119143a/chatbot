@@ -1,0 +1,150 @@
+/*
+Theme Name: HR Policies Child
+Author: Nitin
+Description: Policies Child Theme
+Version: 1.1
+Template: policies
+
+This is the child theme for Policies theme, generated with Generate Child Theme plugin by catchthemes.
+
+(optional values you can add: Theme URI, Author URI, License, License URI, Tags, Text Domain)
+*/
+.topbutton {
+	cursor: pointer;
+	height:40px;
+	width:40px;
+	position:fixed;
+	background: #666;
+    border-radius: 50%;
+	right:15px;
+	bottom:9px;
+	display:none;
+}
+@media(max-width:768px){
+	.topbutton{
+		right:30px;
+		bottom:17px;
+	}
+}
+.topbutton i {
+	color: white;
+    font-size: 20px;
+    margin-top: 6px;
+}
+
+.comment-reply-title {
+	font-size: 18px;
+    font-weight: bold;
+}
+
+.comment-list {
+    padding-left:15px;
+	margin-top:20px;
+}
+
+li[id^="li-comment-"] {
+    list-style-type:none;
+}
+
+a.logo, a.logo:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.search-article {
+    border-bottom: solid 1px #ccc;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.tagcloud {
+	height: 200px;
+    overflow-y: scroll;
+    margin-top: 10px;
+}
+.tagcloud ul {
+	padding: 0px;
+    width: 100%;
+    margin-bottom: 0px !important;
+}
+
+.tagcloud ul li {
+	list-style-type: none;
+    text-align: left;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.tagcloud ul li a {
+    font-size: 14px;
+}
+
+.tagcloud ul li a {
+    border-bottom: none;
+    color: black;
+    width: 100%;
+    font-size: 14px;
+}
+
+.tagcloud ul li a:hover {
+    text-decoration: none !important;
+}
+
+.tagcloud ul li::before {
+    content: "\203A";
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+.tagcloud a {
+    font-size: 12pt !important;
+}
+
+.admin-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.description {
+    overflow: hidden;
+    -webkit-line-clamp: 4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.subcategory-heading {
+    font-weight: 600;
+}
+.sub-category-posts li::before {
+    content: "\2022" !important;
+}
+
+.MarginTopSec{
+  margin-top: 10px;
+}
+
+.popupoverlay-close {
+    color:black;
+}
+
+.single-related-files {
+    height: 200px;
+    min-height: 150px;
+    overflow: auto;
+    margin-top: 20px;
+}
+
+.sub-category-posts li.post {
+    padding-left: 5%;
+}
+
+#wpadminbar {
+    display: none !important;
+}
+html {
+    margin-top: 0 !important;
+}
+

@@ -1,0 +1,9 @@
+/*
+Theme Name:     Policies Child
+Template:       policies
+
+This is the child theme for Policies theme, generated with Generate Child Theme plugin by catchthemes.
+
+Right to Left text support.
+*/
+@import url("../twentyseventeen/rtl.css");
